@@ -1,0 +1,13 @@
+<meta charset="utf-8">
+<script>
+	var rubles = prompt("Введите сумму в рублях");
+	var dollar = 78.0;
+	var euro = 96.25
+
+	var rubToEuro = rubles/euro;
+	var rubToDollar = rubles/dollar;
+	alert ( 
+			rubles + " рублей равно " + rubToEuro.toFixed(2) + " евро. \n" + //специальный служебный символ "\n" для вывода данных на две строчки.
+			rubles + " рублей равно " + rubToDollar.toFixed(2) + " доллара." // команда "toFixed(2)" для округления результатов вычисления до 2х символов после запятой.
+	);
+</script>

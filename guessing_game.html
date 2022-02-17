@@ -3,21 +3,24 @@
 	
 	var answer = parseInt(Math.random() * 100);
 	var userAnswer = +prompt("Угадайте чило от 0 до 100");
+	var maxTryCount = 5;
 
-	for(var tryCount = 1; tryCount <= 7; tryCount++){
+	for(var tryCount = 1; tryCount < maxTryCount; tryCount++){
 		if(userAnswer == answer){
-			document.write("Поздравляем с победой!");
+			alert("Поздравляем с победой! ");
 			break;
 			//continue; - переход к следующей итерации, он нам сейчас не подходит
 		}else if(userAnswer  > answer){
-			document.write("Вы ввели слишком большое число. ");
+			alert("Вы ввели слишком большое число. ");
 		}else if(userAnswer < answer){
-			document.write("Вы ввели слишком маленькое число. ");
+			alert("Вы ввели слишком маленькое число. ");
 		}
-		document.write("У вас осталось " + (7 - tryCount) + " попыток.<br>");
 
-		userAnswer = +prompt("Попробуйте еще раз. Введите число от 1 до 100");
+		userAnswer = +prompt("Попробуйте еще раз. Введите число от 1 до 100 \n У вас осталось "  + (maxTryCount - tryCount) + " попыток.");
 	}
-	document.write("Правильный ответ " + answer);
+	if (tryCount == maxTryCount){
+		alert("Вы проиграли:(");
+	}
+	alert("Правильный ответ: " + answer);
 	
 </script>

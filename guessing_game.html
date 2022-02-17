@@ -19,8 +19,8 @@
 		userAnswer = +prompt("Попробуйте еще раз. Введите число от 1 до 100 \n У вас осталось "  + (maxTryCount - tryCount) + " попыток.");
 	}
 	if (tryCount == maxTryCount&&userAnswer != answer){
-		alert("Вы проиграли:(");
-	}else{
+		alert("Вы проиграли :(");
+	}else if (tryCount == maxTryCount&&userAnswer == answer){
 		alert("Поздравляем с победой! ");
 	}
 	alert("Правильный ответ: " + answer);

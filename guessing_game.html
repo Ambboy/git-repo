@@ -2,6 +2,14 @@
 <script type="text/javascript">
 	
 	var answer = parseInt(Math.random() * 100);
-	document.write(answer);
+	var userAnswer = +prompt("Угадайте чило от 0 до 100");
+
+	if(userAnswer == answer){
+		document.write("Поздравляем с победой!");
+	}else if(userAnswer  > answer){
+		document.write("Вы ввели слишком большое число");
+	}else if(userAnswer < answer){
+		document.write("Вы ввели слишком маленькое число");
+	}
 
 </script>

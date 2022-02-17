@@ -18,8 +18,10 @@
 
 		userAnswer = +prompt("Попробуйте еще раз. Введите число от 1 до 100 \n У вас осталось "  + (maxTryCount - tryCount) + " попыток.");
 	}
-	if (tryCount == maxTryCount){
+	if (tryCount == maxTryCount&&userAnswer != answer){
 		alert("Вы проиграли:(");
+	}else{
+		alert("Поздравляем с победой! ");
 	}
 	alert("Правильный ответ: " + answer);
 	

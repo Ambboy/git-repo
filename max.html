@@ -3,9 +3,13 @@
 	var a = +prompt("Введите первое число:");
 	var b = +prompt("Введите второе число:");
 
-	if(a >= b){
+	if(a > b){
 		var max = a;
-	} else {
+	} else if (a == b){
+		alert("Числа равны!");
+		max = a;
+	}
+	else {
 		max = b;
 	}
 	alert(max);

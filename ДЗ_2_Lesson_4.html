@@ -1,0 +1,35 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+	
+	var summ = +prompt("Введите сумму вклада: ");
+	var precent = +prompt("Введите процент для начисления: ");
+
+	precent = precent / 100;
+
+	//легкий вариант
+	/*var year1 = summ + (summ * precent);
+	var year2 = year1 + (year1 * precent);
+	var year3 = year2 + (year2 * precent);
+	var year4 = year3 + (year3 * precent);
+	var year5 = year4 + (year4 * precent);
+
+	alert("Изменение вклада по годам: \n" +
+		"1 год " + year1.toFixed(2) + " рублей\n" +
+		"2 год " + year2.toFixed(2) + " рублей\n" +
+		"3 год " + year3.toFixed(2) + " рублей\n" +
+		"4 год " + year4.toFixed(2) + " рублей\n" +
+		"5 год " + year5.toFixed(2) + " рублей\n");*/
+
+	//цикличный вариант
+	var months = +prompt("Введите срок вклада в годах: ");
+
+	var result = "Изменение размера вклада по годам: \n";
+	 for(var i = 1; i <= months; i++){
+	 	summ = summ + (summ * precent);
+	 	result = (result + i) + " лет " + summ.toFixed(2) + " рублей\n";
+	 	
+	 }
+	 alert(result);
+
+
+</script>

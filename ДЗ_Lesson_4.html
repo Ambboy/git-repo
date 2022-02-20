@@ -3,7 +3,7 @@
 alert ("Отгадайте загадку! \nПравила: У нас для тебя есть три загадки. Чтобы выиграть, нужно поочереди отгадать все три. Не отгадаешь хотя бы одну, игра останавливается и ты проиграл. Если готов, жми Закрыть и ПОЕХАЛИ!");
 
 
-var quest = prompt ("Первая загадка! \nДва конца, два кольца, посередине гвоздик.");
+/*var quest = prompt ("Первая загадка! \nДва конца, два кольца, посередине гвоздик.");
 	if (quest == "Ножницы" || quest == "ножницы" || quest == "yj;ybws" || quest == "Yj;ybws"){
 		var quest = prompt ("Молодец! \nСледующая загадка. \nДом без окон, без дверей, полна горница людей.");
 			if (quest == "Огурец" || quest == "огурец" || quest == "juehtw" || quest == "Juehtw"){
@@ -21,7 +21,35 @@ var quest = prompt ("Первая загадка! \nДва конца, два к
 	}
 	else {
 		alert("Как хорошо, что мы не в сказке и никто не отрубит тебе голову за неправильный ответ!");
-	}
+	}*/
 
+	var userAnswer = prompt ("Первая загадка! \nДва конца, два кольца, посередине гвоздик.");
+	var score = 0;
+	var userAnswer = userAnswer.toLowerCase();
+		if(userAnswer == "ножницы" || userAnswer == "yj;ybws"){
+			alert("Вы отгадали");
+			score++;
+		}
+		else
+			alert("Вы не отгадали");
+
+	var userAnswer = prompt ("Первая загадка! \nДва конца, два кольца, посередине гвоздик.");
+	var userAnswer = userAnswer.toLowerCase();
+		if(userAnswer == "ножницы" || userAnswer == "yj;ybws"){
+			alert("Вы отгадали");
+			score++;
+		}
+		else
+			alert("Вы не отгадали");
+
+	var userAnswer = prompt ("Первая загадка! \nДва конца, два кольца, посередине гвоздик.");
+	var userAnswer = userAnswer.toLowerCase();
+		if(userAnswer == "ножницы" || userAnswer == "yj;ybws"){
+			alert("Вы отгадали");
+			score++;
+		}
+		else
+			alert("Вы не отгадали");
+	alert ("Вы отгадали " + score + " загадки.");
 
 </script>

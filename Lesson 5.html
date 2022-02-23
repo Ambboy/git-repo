@@ -15,5 +15,21 @@ alert(numbers[0]);//42
 
 	userAnswer = +prompt("Каким было последнее число?"); 
 	alert(numbers.length);//5
-	alert(numbers[numbers.length - 1]);
-</script>
+	alert(numbers[numbers.length - 1]);// то же самое, что и numbers[4]
+
+	if(userAnswer == numbers[ numbers.length - 1]){
+		alert("Allright! Good for you!");
+	}
+	else{
+		alert("You idiot! " + numbers[ numbers.length - 1]);
+	}
+
+	var n = parseInt(Math.random()*numbers.length);
+	userAnswer = +prompt("А как на счет числа под номером: " + (n + 1) + "?");
+	if (userAnswer = numbers [ n ]){
+		alert("All Good!");
+	} else {
+		alert("You realu stuped! " + numbers[ n ]);
+	}
+
+</script> 

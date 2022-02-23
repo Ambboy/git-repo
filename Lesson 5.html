@@ -2,11 +2,12 @@
 <script type="text/javascript">
 	
 var numbers = [];
-numbers.push(42);//42
-numbers.push(18);//42, 18
-numbers.push(64);//42,18,64
-numbers.pop();//42,18
-var m = numbers.pop();
+
+for(var i = 0; i < 5; i++){
+		var randomNumber = parseInt(Math.random() * 100);
+		numbers.push(randomNumber);
+}
+
 alert("Запомните числа и их порядок: " + numbers );
 
 var userAnswer = +prompt("Каким было первое число?");

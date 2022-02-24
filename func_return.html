@@ -2,7 +2,7 @@
 <script type="text/javascript">
 	
 
-	function getRandomNumber(max) {
+	/*function getRandomNumber(max) {
 		return Math.round(Math.random() * max);
 	}
 
@@ -25,14 +25,34 @@
 		return result;
 	}
 
-	// факториал 5 равен 1*2*3*4*5 
+	// 5! = 4!*5 
+	// 4! = 3!*4
+	// 3! = 2!*3
+	// 2! = 1!*2
+	// 1! = 0!*1
+	// 0! = 0*/
 
+function recursiveFactorial(z) {
+	if(z == 0)
+		return 1;
+
+	else
+		return recursiveFactorial(z-1) * z;
+
+}
+
+
+	var rf = recursiveFactorial(6);
+	alert (rf);
+/*
 	var f = factorial(6);
 	alert (f);
 
 	var a = max(34, 68);
 	var n = getRandomNumber(100);
-	var m = getRandomNumber(4);
+	var m = getRandomNumber(4);*/
+
+
 
 
 </script>

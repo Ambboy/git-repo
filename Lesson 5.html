@@ -10,12 +10,25 @@
 			}
 	}
 
-		var numbers = [];
-
-		for(var i = 0; i < 5; i++){
-				var randomNumber = parseInt(Math.random() * 100);
-				numbers.push(randomNumber);
+	function getRandomNumber(max) {
+			return Math.round(Math.random() * max);
 		}
+
+	function getRandomNumberArray(length) {
+			var arr = [];
+
+			for(var i = 0; i < length; i++){
+				var randomNumber = getRandomNumber(100);
+				arr.push(randomNumber);
+			}
+
+			return arr;
+
+		}	
+
+		
+		var numbers = getRandomNumberArray(5);
+
 
 		alert("Запомните числа и их порядок: " + numbers );
 
@@ -28,7 +41,7 @@
 
 		compareAnswers(userAnswer, numbers[numbers.length - 1]);
 
-		var n = parseInt(Math.random()*numbers.length);
+		var n = getRandomNumber(numbers.length - 1);
 		userAnswer = +prompt("А как на счет числа под номером: " + (n + 1) + "?");
 	
 		compareAnswers(userAnswer, numbers[ n ])
